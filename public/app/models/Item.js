@@ -3,7 +3,7 @@
  */
 import { Model, View, Collection, Router, LocalStorage } from 'backbone';
 
-export default class ToDoItem extends Model {
+export default class Item extends Model {
     defaults () {
         return {
             title: 'untitled',
