@@ -1,14 +1,28 @@
 /**
  * Created by Rytis on 2016-04-25.
  */
-import Item from './models/Item';
+import * as Mn from 'backbone.marionette';
+import Tasks from './models/Tasks';
+
 
 export class Main {
     constructor() {
         console.log('hi');
 
-        let item = new Item();
-        item.get('title');
+        let items = new Tasks();
+
+
+        // let item = new Task();
+        // item.get('title');
+
+        debugger;
+
+        this.layout = new Mn.LayoutView.extend({
+            regions: {
+                list: '#list',
+                form: '#form'
+            }
+        });
 
     }
 }

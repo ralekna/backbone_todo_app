@@ -3,7 +3,8 @@
  */
 import { Model, View, Collection, Router, LocalStorage } from 'backbone';
 
-export default class Item extends Model {
+export default Model.extend({
+
     defaults () {
         return {
             title: 'untitled',
@@ -11,4 +12,4 @@ export default class Item extends Model {
             completed: false
         };
     }
-}
+});
