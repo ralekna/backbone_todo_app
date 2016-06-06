@@ -1,28 +1,31 @@
 /**
  * Created by Rytis on 2016-04-25.
  */
-import * as Mn from 'backbone.marionette';
+import {Application} from 'backbone.marionette';
 import Tasks from './models/Tasks';
+import AppView from './views/AppView';
 
+let TodoApp = Application.extend({
+    initialize(options) {
+        console.log(options);
+    }
+});
 
 export class Main {
     constructor() {
         console.log('hi');
 
+        let app = new TodoApp({name: 'My todo'});
+
         let items = new Tasks();
 
+
+        app.rootView = new AppView();
 
         // let item = new Task();
         // item.get('title');
 
         debugger;
-
-        this.layout = new Mn.LayoutView.extend({
-            regions: {
-                list: '#list',
-                form: '#form'
-            }
-        });
 
     }
 }
