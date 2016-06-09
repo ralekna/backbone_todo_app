@@ -13,14 +13,16 @@ let TodoApp = Application.extend({
 
 export class Main {
     constructor() {
-        console.log('hi');
 
         let app = new TodoApp({name: 'My todo'});
 
-        let items = new Tasks();
+        app.on('initialize:after', () => {
+            console.log('started');
+        });
 
+        app.start();
 
-        app.rootView = new AppView();
+        // app.rootView = new AppView();
 
         // let item = new Task();
         // item.get('title');
