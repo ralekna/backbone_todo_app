@@ -16,6 +16,10 @@ export class Main {
 
         let app = new TodoApp({name: 'My todo'});
 
+        app.addRegions({
+            mainRegion: '#container'
+        });
+
         app.on('initialize:after', () => {
             console.log('started');
         });

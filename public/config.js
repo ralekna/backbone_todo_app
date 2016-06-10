@@ -20,6 +20,7 @@ System.config({
     "backbone.marionette": "npm:backbone.marionette@2.4.5",
     "core-js": "npm:core-js@1.2.6",
     "jquery": "npm:jquery@2.2.3",
+    "text": "github:systemjs/plugin-text@0.0.8",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
