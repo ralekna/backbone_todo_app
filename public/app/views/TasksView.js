@@ -1,13 +1,17 @@
 /**
  * Created by Rytis on 2016-04-27.
  */
-import { ItemsView } from 'backbone.marionette';
+import { CollectionView } from 'backbone.marionette';
 import { Model, View, Collection, Router, LocalStorage } from 'backbone';
-import Task from 'models/Task';
+import TaskView from './TaskView';
 
-export default View.extend({
+export default CollectionView.extend({
 
-    initialize() {
-        
+    tagName: 'ul',
+    childView: TaskView,
+
+
+    collectionEvents: {
+        "sync": "render"
     }
 });

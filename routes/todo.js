@@ -7,7 +7,7 @@ const router = require('express').Router();
 const itemKeys = ['id', 'title', 'createdAt', 'completed'];
 let id = 1;
 let items = {
-    1: {id: 1, name: 'First'}
+    1: {id: 1, title: 'First', completed: false}
 };
 
 router
